@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Open+Sans:wght@400;500;600&family=Ubuntu:wght@400;500;700&display=swap');
+
+@import "reset";
+
+body {
+	font-family: 'Inter', sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 1.187em;
+	background-color: #465038;
+}
+
+.container {
+	max-width: 1202px;
+	width: 100%;
+	padding-left: 16px;
+	padding-right: 16px;
+	margin-left: auto;
+	margin-right: auto;
+}

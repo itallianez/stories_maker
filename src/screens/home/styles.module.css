@@ -1,0 +1,29 @@
+.wrapper {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 20px;
+	padding: 40px 0;
+}
+
+.side_wrapper {
+	max-width: 370px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	
+}
+
+.form_wrapper { 
+	width: 100%;
+	position: relative;
+}
+
+.bg_image {
+	position: absolute;
+	bottom: 40px;
+	left: 0;
+	width: 100%;
+	height: auto;
+	opacity: 0.4;
+}
