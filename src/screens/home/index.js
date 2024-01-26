@@ -43,7 +43,11 @@ export const Home = () => {
 			<div className={styles.wrapper}>
 				<div className={styles.side_wrapper}>
 					<div className={styles.form_wrapper}>
-						<img src={background} className={styles.bg_image} />
+						<img
+							src={background}
+							className={styles.bg_image}
+							alt={"благодійний збір"}
+						/>
 						<Input
 							placeholder="Збір для кого?"
 							onInput={e => onChange(e, "title")}

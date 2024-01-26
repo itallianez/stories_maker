@@ -8,15 +8,19 @@ import styles from './styles.module.css'
 export const PreviewImage = ({ title, target, src, group, priceTarget }) => {
 	return (
 		<div className={styles.wrapper}>
-			<img src={background} className={styles.bg_image}/>
+			<img
+				src={background}
+				className={styles.bg_image}
+				alt={"благодійний збір"}
+			/>
 			<div className={styles.content}>
-				<div className={styles.title}>{title || 'Для кого збір'}</div>
-				<div className={styles.target}>{target || 'Ціль збору'}</div>
+				<div className={styles.title}>{title || "Для кого збір"}</div>
+				<div className={styles.target}>{target || "Ціль збору"}</div>
 				<div className={styles.desc_wrapper}>
 					<div className={styles.desc_item_wrapper}>
 						<div className={styles.icon}>📌</div>
 						<div className={styles.subtitle}>Кому?</div>
-						<div className={styles.desc}>{group || 'підрозділ'}</div>
+						<div className={styles.desc}>{group || "підрозділ"}</div>
 					</div>
 					<div className={styles.desc_item_wrapper}>
 						<div className={styles.icon}>💰</div>
@@ -25,7 +29,11 @@ export const PreviewImage = ({ title, target, src, group, priceTarget }) => {
 					</div>
 				</div>
 			</div>
-			<img className={styles.image} src={src || defaultImage} />
+			<img
+				className={styles.image}
+				src={src || defaultImage}
+				alt={"благодійний збір"}
+			/>
 			<div className={styles.link_wrapper}>
 				<div className={styles.target_link}>
 					🔗<span>Посилання на банку</span>

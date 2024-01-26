@@ -42,7 +42,7 @@ export const ImagePicker = ({ selectedImage, setSelectedImage }) => {
 			)}
 			{selectedImage && (
 				<div className={styles.image_wrapper}>
-					<img src={selectedImage} className={styles.image} />
+					<img src={selectedImage} className={styles.image} alt={'благодійний збір'}/>
 					<div onClick={handleImageRemove} className={styles.delete_btn}>
 						<CloseIcon className={styles.icon} />
 					</div>
