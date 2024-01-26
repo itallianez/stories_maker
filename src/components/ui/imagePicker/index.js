@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { CloseIcon, ImagePickerIcon } from "../../../icons";
 
 import styles from './imagePicker.module.css'
 
 export const ImagePicker = ({ selectedImage, setSelectedImage }) => {
-	// const [selectedImage, setSelectedImage] = useState(null);
 
 	const handleImageChange = e => {
 		const file = e.target.files[0];
