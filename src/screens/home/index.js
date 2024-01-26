@@ -24,7 +24,7 @@ export const Home = () => {
 		toPng(ref.current, { cacheBust: true })
 			.then(dataUrl => {
 				const link = document.createElement("a");
-				link.download = `${formData.title}_${formData.target}_${formData.priceTarget}грн.png`;
+				link.download = `${formData?.title}_${formData?.target}_${formData?.priceTarget}грн.png`;
 				link.href = dataUrl;
 				link.click();
 			})
