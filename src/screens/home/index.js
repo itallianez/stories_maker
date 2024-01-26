@@ -1,4 +1,4 @@
-import React, { useRef, useCallback, useState } from "react";
+import React, { useRef, useState } from "react";
 import { toPng } from "html-to-image";
 import { ImagePicker, Input, PageLayout, PreviewImage, Submit } from "../../components";
 
@@ -16,7 +16,7 @@ export const Home = () => {
 		priceTarget: "",
 	});
 
-	const onButtonClick = useCallback(() => {
+	const onButtonClick = (() => {
 		if (ref.current === null) {
 			return;
 		}
