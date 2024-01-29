@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/stories-maker/static/css/main.23b61a2f.css",
+    "main.js": "/stories-maker/static/js/main.ef209890.js",
+    "static/media/image 2.png": "/stories-maker/static/media/image 2.6ed643437bb2dbb21d85.png",
+    "index.html": "/stories-maker/index.html",
+    "main.23b61a2f.css.map": "/stories-maker/static/css/main.23b61a2f.css.map",
+    "main.ef209890.js.map": "/stories-maker/static/js/main.ef209890.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.23b61a2f.css",
+    "static/js/main.ef209890.js"
+  ]
+}
