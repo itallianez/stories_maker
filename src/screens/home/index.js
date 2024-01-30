@@ -88,7 +88,7 @@ export const Home = () => {
 					</div>
 				</div>
 				<div className={styles.side_wrapper}>
-					<div ref={ref}>
+					<div ref={ref} style={{width: '100%'}}>
 						<PreviewImage {...formData} src={selectedImage} />
 					</div>
 				</div>
