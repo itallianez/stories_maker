@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useCallback } from "react";
 import { toPng } from "html-to-image";
 import { ImagePicker, Input, PageLayout, PreviewImage, Submit } from "../../components";
 
@@ -16,7 +16,7 @@ export const Home = () => {
 		priceTarget: "",
 	});
 
-	const onButtonClick = (() => {
+	const onButtonClick = useCallback(() => {
 		if (ref.current === null) {
 			return;
 		}
@@ -24,7 +24,22 @@ export const Home = () => {
 		toPng(ref.current, { cacheBust: true })
 			.then(dataUrl => {
 				const link = document.createElement("a");
-				link.download = `${formData?.title}_${formData?.target}_${formData?.priceTarget}грн.png`;
+				
+				const currentDate = new Date();
+				const dateDime =
+					currentDate.getDate() +
+					"/" +
+					(currentDate.getMonth() + 1) +
+					"/" +
+					currentDate.getFullYear() +
+					"_" +
+					currentDate.getHours() +
+					"_" +
+					currentDate.getMinutes() +
+					"_" +
+					currentDate.getSeconds();
+
+				link.download = `${dateDime}.png`;
 				link.href = dataUrl;
 				link.click();
 			})
@@ -32,7 +47,7 @@ export const Home = () => {
 				console.log(err);
 			});
 	}, [ref]);
-
+	
 	const onChange = (e, key) => {
 		const value = e.target.value;
 		setFormData({ ...formData, [key]: value });
@@ -54,7 +69,7 @@ export const Home = () => {
 						/>
 						<Input
 							placeholder="Ціль збору"
-							textarea
+							textarea='true'
 							onInput={e => onChange(e, "target")}
 						/>
 						<Input
