@@ -86,8 +86,7 @@
 	width: 100%;
 	display: block;
 	height: 290px;
-	/* object-fit: cover; */
-	background-size: cover;
+	object-fit: cover;
 }
 
 .link_wrapper {

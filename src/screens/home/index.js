@@ -1,7 +1,7 @@
 import React, { useRef, useState, useCallback } from "react";
-import { toPng } from "html-to-image";
+import { toPng, toBlob } from "html-to-image";
 import { ImagePicker, Input, PageLayout, PreviewImage, Submit } from "../../components";
-
+import { saveAs } from "file-saver";
 import background from '../../assets/images/bg.png'
 
 import styles from  './styles.module.css'
@@ -21,10 +21,10 @@ export const Home = () => {
 			return;
 		}
 
-		toPng(ref.current, { cacheBust: true })
-			.then(dataUrl => {
-				const link = document.createElement("a");
-				
+		toBlob(ref.current, { cacheBust: true })
+			.then(blob => {
+				// const link = document.createElement("a");
+
 				const currentDate = new Date();
 				const dateDime =
 					currentDate.getDate() +
@@ -38,10 +38,10 @@ export const Home = () => {
 					currentDate.getMinutes() +
 					"_" +
 					currentDate.getSeconds();
-
-				link.download = `${dateDime}.png`;
-				link.href = dataUrl;
-				link.click();
+				saveAs(blob, `${dateDime}.png`);
+				// link.download = `${dateDime}.png`;
+				// link.href = dataUrl;
+				// link.click();
 			})
 			.catch(err => {
 				console.log(err);

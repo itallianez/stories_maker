@@ -6,6 +6,9 @@ import background from "../../assets/images/bg.png";
 import styles from './styles.module.css'
 
 export const PreviewImage = ({ title, target, src, group, priceTarget }) => {
+	console.log(src);
+	const image = !!src ? src : defaultImage;
+	console.log({ image });
 	return (
 		<div className={styles.wrapper}>
 			{/* <img
@@ -33,14 +36,10 @@ export const PreviewImage = ({ title, target, src, group, priceTarget }) => {
 					</div>
 				</div>
 			</div>
-			{/* <img
+			<img
 				className={styles.image}
 				src={src || defaultImage}
 				alt={"благодійний збір"}
-			/> */}
-			<div
-				style={{ backgroundImage: `url(${src || defaultImage})` }}
-				className={styles.image}
 			/>
 			<div className={styles.link_wrapper}>
 				<div className={styles.target_link}>
